@@ -48,7 +48,7 @@ function checkStatus(hash, notificationId) {
             chrome.notifications.clear(notificationId, function (ok) {});
             window.open('https://mediacru.sh/' + result.hash + '#fromExtension', '_blank');
         } else {
-            setTimeout(function() { checkStatus(hash, notification); }, 1000);
+            setTimeout(function() { checkStatus(hash, notificationId); }, 1000);
         }
     };
     xhr.send();
